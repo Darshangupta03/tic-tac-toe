@@ -28,4 +28,8 @@ def check():
     elif(b[0][0]["state"]==b[0][1]["state"]==b[0][2]["state"]==b[1][0]["state"]==b[1][1]["state"]==b[1][2]["state"]==b[2][0]["state"]==b[2][1]["state"]==b[2][2]["state"]==DISABLED):
         messagebox.showinfo("Tied!!","The match ended in a draw")
         reset()
-    
+  def click(row,col):
+        b[row][col].config(text=a,state=DISABLED,disabledforeground=colour[a])
+        check()
+        change_a()
+        label.config(text=a+"'s Chance")  
