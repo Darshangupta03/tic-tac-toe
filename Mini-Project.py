@@ -1,17 +1,21 @@
 from tkinter import *
 from tkinter import messagebox
 import random as r
+
 #Function to define a button
 def button(frame):          
     b=Button(frame,padx=1,bg="light blue",width=3,text="   ",font=('arial',60,'bold'),relief="sunken",bd=10)
     return b
+
+#Change the player
 def change_a():
     global a
     for i in ['O','X']:
         if not(i==a):
             a=i
             break
-  #Resets the game
+
+#Resets the game
 def reset():                
     global a
     for i in range(3):
@@ -19,6 +23,7 @@ def reset():
                 b[i][j]["text"]=" " 
                 b[i][j]["state"]=NORMAL
     a=r.choice(['O','X'])
+
 #check who win or match is draw
 def check():                
     for i in range(3):
@@ -31,11 +36,14 @@ def check():
     elif(b[0][0]["state"]==b[0][1]["state"]==b[0][2]["state"]==b[1][0]["state"]==b[1][1]["state"]==b[1][2]["state"]==b[2][0]["state"]==b[2][1]["state"]==b[2][2]["state"]==DISABLED):
         messagebox.showinfo("Tied!!","The match ended in a draw")
         reset()
-  def click(row,col):
+  
+def click(row,col):
         b[row][col].config(text=a,state=DISABLED,disabledforeground=colour[a])
         check()
         change_a()
         label.config(text=a+"'s Chance")  
+
+#Main Program
 root=Tk()                   
 root.title("Tic-Tac-Toe")   
 a=r.choice(['O','X'])       
