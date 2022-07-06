@@ -36,7 +36,7 @@ def check():
 root=Tk()                   
 root.title("Tic-Tac-Toe")   
 a=r.choice(['O','X'])       
-colour={'O':"deep sky blue",'X':"lawn green"}
+colour={'O':"black",'X':"purple"}
 b=[[],[],[]]
 for i in range(3):
         for j in range(3):
