@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import random as r
+#Function to define a button
 def button(frame):          
     b=Button(frame,padx=1,bg="light blue",width=3,text="   ",font=('arial',60,'bold'),relief="sunken",bd=10)
     return b
@@ -10,13 +11,15 @@ def change_a():
         if not(i==a):
             a=i
             break
-    def reset():                
+  #Resets the game
+def reset():                
     global a
     for i in range(3):
         for j in range(3):
                 b[i][j]["text"]=" " 
                 b[i][j]["state"]=NORMAL
     a=r.choice(['O','X'])
+#check who win or match is draw
 def check():                
     for i in range(3):
             if(b[i][0]["text"]==b[i][1]["text"]==b[i][2]["text"]==a or b[0][i]["text"]==b[1][i]["text"]==b[2][i]["text"]==a):
