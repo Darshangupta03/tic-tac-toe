@@ -4,3 +4,9 @@ import random as r
 def button(frame):          
     b=Button(frame,padx=1,bg="light blue",width=3,text="   ",font=('arial',60,'bold'),relief="sunken",bd=10)
     return b
+def change_a():
+    global a
+    for i in ['O','X']:
+        if not(i==a):
+            a=i
+            break
