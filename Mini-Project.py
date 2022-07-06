@@ -17,3 +17,15 @@ def change_a():
                 b[i][j]["text"]=" " 
                 b[i][j]["state"]=NORMAL
     a=r.choice(['O','X'])
+def check():                
+    for i in range(3):
+            if(b[i][0]["text"]==b[i][1]["text"]==b[i][2]["text"]==a or b[0][i]["text"]==b[1][i]["text"]==b[2][i]["text"]==a):
+                    messagebox.showinfo("Congrats!!","'"+a+"' has won")
+                    reset()
+    if(b[0][0]["text"]==b[1][1]["text"]==b[2][2]["text"]==a or b[0][2]["text"]==b[1][1]["text"]==b[2][0]["text"]==a):
+        messagebox.showinfo("Congrats!!","'"+a+"' has won")
+        reset()   
+    elif(b[0][0]["state"]==b[0][1]["state"]==b[0][2]["state"]==b[1][0]["state"]==b[1][1]["state"]==b[1][2]["state"]==b[2][0]["state"]==b[2][1]["state"]==b[2][2]["state"]==DISABLED):
+        messagebox.showinfo("Tied!!","The match ended in a draw")
+        reset()
+    
