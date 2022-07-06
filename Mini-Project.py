@@ -10,3 +10,10 @@ def change_a():
         if not(i==a):
             a=i
             break
+    def reset():                
+    global a
+    for i in range(3):
+        for j in range(3):
+                b[i][j]["text"]=" " 
+                b[i][j]["state"]=NORMAL
+    a=r.choice(['O','X'])
