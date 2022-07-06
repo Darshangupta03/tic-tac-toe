@@ -33,3 +33,16 @@ def check():
         check()
         change_a()
         label.config(text=a+"'s Chance")  
+root=Tk()                   
+root.title("Tic-Tac-Toe")   
+a=r.choice(['O','X'])       
+colour={'O':"deep sky blue",'X':"lawn green"}
+b=[[],[],[]]
+for i in range(3):
+        for j in range(3):
+                b[i].append(button(root))
+                b[i][j].config(command= lambda row=i,col=j:click(row,col))
+                b[i][j].grid(row=i,column=j)
+label=Label(text=a+"'s Chance",font=('arial',20,'bold'))
+label.grid(row=3,column=0,columnspan=3)
+root.mainloop()
