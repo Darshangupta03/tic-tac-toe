@@ -1,7 +1,9 @@
-# tic-tac-toe
-tic tac toe game made using Python
-mini-project
+# Python Mini-Project : Tic-Tac-Toe Game
 
-made by -
+GUI-based 2-Player 3x3 Tic-Tac-Toe Game made using Python 
+
+
+
+Made by -
 - Darshan Gupta - 16010121063
-- Vignesh iyer - 16010121066
+- Vignesh Iyer  - 16010121066
